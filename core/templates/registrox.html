@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load bootstrap %}
+{% block main %}
+
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+      <div class="form-group">
+        <label>Funcionário</label>
+        <input type="text" class="form-control" id="funcionario" placeholder="Nome do funcionario">
+        <small id="nomefun" class="form-text text-muted">Coloque aqui o seu nome completo.</small>
+      </div>
+      <div class="form-group">
+        <label>Empresa</label>
+        <input type="text" class="form-control" id="empresa" placeholder="Nome da Empresa">
+        <small id="emailHelp" class="form-text text-muted">Coloque aqui o nome da sua empresa.</small>
+      </div>
+      <div class="form-group">
+        <label for="usuario">Usuário</label>
+        <input type="text" class="form-control" id="usuario" placeholder="Nome do Usuario">
+      </div>
+      <div class="form-group">
+        <label for="senha">Senha</label>
+        <input type="password" class="form-control" id="senha" placeholder="Senha">
+      </div>
+        <button type="submit" class="btn btn-primary">Salvar</button>
+    </form>
+{% endblock %}
